@@ -164,7 +164,7 @@ listLocations = [
         [
             './Resources/wedding-banner-image.jpg',
             './Resources/japan/osaka-castle-pic3.png',
-            './Resources/japan/osaka-car-selfie.png'
+            './Resources/japan/Osaka-car-selfie.png'
         ]
     }, 
     {
