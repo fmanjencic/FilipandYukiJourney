@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filip & Yuki's Journey</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="./Resources/webiconplane.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-4.0.0.js" integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div style="display: flex; margin: auto; justify-content: center; align-items: flex-end; gap: 15px;">
+        <h1 style="text-align: center;">Filip & Yuki's Journey</h1><img src="./Resources/swansicon.svg" style="width: 85px; height: auto;"></img>
+        
+    </div>
+    <img style="display: none;" src="./Resources/wedding-banner-image-cropped.png" id="wedding-banner-img" />
+    <div id="toggle-container" style="position: relative;">
+        <div id="usa-label" style="display: none;">U.S.A.<span stlye="margin-left: 2px"></div>
+        <div style="display: none;" id="toggle-box"><label class="switch">
+        <input type="checkbox" id="toggle-check">
+        <span class="slider round"></span></div>
+        <div id="japan-label" style="display: none;">Japan</div>
+    </label>
+        <img src="./Resources/airplane-icon.svg" id="plane-icon" style="display: none;"/>
+    </div>
+    <div class="heart" style="display: none;" id="heart"></div>
+    <div id="mapbox-container"><div id="map" style="display: none;"></div></div>
+    <script>(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})({
+key: 'AIzaSyAdso5yCIGWkU8zvJ9-AxpIHMH2vYdo_FI',
+v: "weekly",
+});</script>
+    <script src="fadestyles.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

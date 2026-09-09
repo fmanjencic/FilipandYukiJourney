@@ -1,0 +1,255 @@
+body {
+    background-color: #dfd3bf;
+    color: #4e3827;
+    font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
+    margin: 0;
+}
+
+#wedding-banner-img {
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    margin: auto;
+}
+
+#toggle-container {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 19px;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ddbea8;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  /*background-color: #fff;*/
+ background-image: url('https://upload.wikimedia.org/wikipedia/en/archive/a/a4/20151118161037%21Flag_of_the_United_States.svg');
+ background-size: 18px 18px;       /* Scale down the image to fit the 26px circle */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.underline {
+    text-decoration: underline;
+    text-decoration-color: goldenrod;
+    text-decoration-thickness: 2px;
+}
+
+/* input:checked + .slider {
+  background-color: #2196F3;
+} */
+
+input:checked + .slider::before {
+    background-image: url('https://www.myphotolounge.com/cdn/shop/files/Japan_1_436x436.jpg?v=1762962376');
+}
+
+
+/* input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+} */
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* MAP */
+#map-container {
+    border: 1px solid red;
+    width: 100%;
+}
+
+#map {
+border: 1px solid #4e3827;
+border-radius: 3px;
+  height: 500px; /* Or height: 100vh; depending on layout */
+  width: 90%;
+  margin: auto;
+    margin-bottom: 30px;
+}
+
+.gm-style-iw.gm-style-iw-c {
+    max-width: 270px !important;
+    margin: auto;
+    max-height: 315px !important;
+    margin-left: 25px;
+    background: whitesmoke;
+}
+
+.gm-style-iw.gm-style-iw-c > img {
+    max-width: 200px;
+    height: auto;
+} 
+
+.gm-style .gm-style-iw-d {
+    font-family: "Caveat", cursive;
+}
+ 
+.location-title {
+  font-size: 23px;
+  border-bottom: 1px solid gold;
+  margin-bottom: 8px;
+}
+
+.gm-style .gm-style-iw-d::-webkit-scrollbar-track, 
+.gm-style .gm-style-iw-d::-webkit-scrollbar-track-piece,
+.gm-style .gm-style-iw-c,
+.gm-style .gm-style-iw-t::after { 
+  background: whitesmoke;
+}
+
+.location-description {
+  font-family: "Caveat", cursive;
+  font-size: 17px;
+}
+
+.heart {
+  --size: 50px; /* Change this one value to resize the heart perfectly */
+
+  position: relative;
+  width: var(--size);
+  height: var(--size);
+  background-color: #FF878B;
+  transform: rotate(-45deg);
+  animation: heartbeat 1.8s infinite ease-in-out;
+  margin: auto;
+  margin-top: 70px;
+  margin-bottom: 500px;
+}
+
+.heart::before,
+.heart::after {
+  content: "";
+  position: absolute;
+  width: var(--size);
+  height: var(--size);
+  background-color: #FF878B;
+  border-radius: 50%;
+}
+
+.heart::before {
+  /* calc(var(--size) / -2) dynamically creates -50px */
+  top: calc(var(--size) / -2); 
+  left: 0;
+}
+
+.heart::after {
+  top: 0;
+  /* calc(var(--size) / 2) dynamically creates 50px */
+  left: calc(var(--size) / 2);
+}
+
+@keyframes heartbeat {
+  0% { transform: scale(1) rotate(-45deg); }
+  20% { transform: scale(1.25) rotate(-45deg); }
+  40% { transform: scale(1.1) rotate(-45deg); }
+  60% { transform: scale(1.35) rotate(-45deg); }
+  100% { transform: scale(1) rotate(-45deg); }
+}
+
+.location-date {
+  font-weight: bold;
+  font-size: 16px;
+  color: grey;
+}
+
+#plane-icon { 
+  width: 25px; 
+  height: auto; 
+  position: absolute; 
+  top: 50%; 
+  left: 20px; 
+  transform: translateY(-50%) translateX(0) scaleX(1); 
+} 
+
+#plane-icon.move-right { 
+  animation: moveToRightThenFlip 4s forwards; 
+} 
+
+@keyframes moveToRightThenFlip { 
+  0% { 
+    left: 20px; /* Matching your base style's starting point */
+    transform: translateY(-50%) translateX(0) scaleX(1); 
+  } 
+  /* Step 1: Traverses smoothly to the right side */ 
+  50% { 
+    left: 95%; 
+    transform: translateY(-50%) translateX(-100%) scaleX(1); 
+  } 
+  /* Step 2: Flips horizontally while staying on the right side */ 
+  100% { 
+    left: 95%; 
+    transform: translateY(-50%) translateX(-100%) scaleX(-1); 
+  } 
+} 
+
+#plane-icon.move-left { 
+  animation: moveToLeftThenUnflip 4s forwards; 
+} 
+
+@keyframes moveToLeftThenUnflip { 
+  /* 0%: Starts exactly where the forward animation ended (at the right side, flipped) */ 
+  0% { 
+    left: 95%; 
+    transform: translateY(-50%) translateX(-100%) scaleX(-1); 
+  } 
+  
+  /* Step 1: Travels all the way back to the left side while STAYING flipped */ 
+  50% { 
+    left: 20px; 
+    transform: translateY(-50%) translateX(0) scaleX(-1); /* 👈 Kept -1 so it flies backward */
+  } 
+  
+  /* Step 2: Now that it's on the left side, it smoothly un-flips face forward */ 
+  100% { 
+    left: 20px; 
+    transform: translateY(-50%) translateX(0) scaleX(1);  /* 👈 Un-flips to normal */
+  } 
+}
